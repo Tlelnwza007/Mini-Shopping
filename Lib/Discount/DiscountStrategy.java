@@ -1,7 +1,15 @@
 package Lib.Discount;
+
+import Lib.CartItem;
+
 /**
- * กลยุทธ์การคิดราคาแบบปกติ (ไม่มีส่วนลด)
+ * Interface สำหรับกลยุทธ์การคำนวณราคาสินค้า
  */
-public class DiscountStrategy {
-    
+public interface DiscountStrategy {
+    /**
+     * คำนวณราคาสุทธิ์สำหรับสินค้า 1 รายการ
+     *@param item รายกาสินค้าในตะกร้า
+     @return ราคาสุทธิ์หลังใช้โปรโมชัน
+     */
+     double calculatePrice(CartItem item) ;
 }
