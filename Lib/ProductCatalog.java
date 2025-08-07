@@ -13,13 +13,13 @@ public class ProductCatalog {
 
     private void checkRep(){
         if(products == null){
-            throw new RuntimeException("RI violated : ") ;
+            throw new RuntimeException("RI violated : produst is null") ;
         }
         // check for duplicate products
         for (int i = 0; i < products.size(); i++) {
             for (int j = i+1; j < products.size(); j++) {
                 if(products.get(i).equals(products.get(j))){
-                    throw new RuntimeException("RI violated : ") ;
+                    throw new RuntimeException("RI violated : duplicate product") ;
                 }
             }
         }

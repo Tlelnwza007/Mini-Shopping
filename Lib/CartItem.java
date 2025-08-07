@@ -19,10 +19,10 @@ public class CartItem {
 
      private void checkRep(){
         if(product == null){
-            throw new RuntimeException("RI violated :") ;
+            throw new RuntimeException("RI violated : product is null") ;
         }
         if(quantity <= 0){
-            throw new RuntimeException("RI violated :") ;
+            throw new RuntimeException("RI violated : quantity is less than 1") ;
         }
      }
 

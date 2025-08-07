@@ -1,9 +1,12 @@
 import Lib.CartItem;
+import Lib.PricingService;
 import Lib.Product;
 import Lib.ProductCatalog;
-
+import Lib.ShoppingCart;
+import Lib.Discount.BogoDiscountStrategy;
+import Lib.Discount.BulkDiscountStrategy;
 public class App {
-      private static int passedCount = 0;
+    private static int passedCount = 0;
     private static int failedCount = 0;
 
     /**
