@@ -1,7 +1,5 @@
 package Lib.Discount;
-
 import Lib.CartItem;
-
 /**
  * กลยุทธ์ส่วนลด Bulk (ซื้อเยอะลดราคา)
  */
@@ -15,8 +13,11 @@ public class BulkDiscountStrategy implements DiscountStrategy {
     }
     @Override
     public double calculatePrice(CartItem item) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calculatePrice'");
+        double originalPrice = item.getProduct().getPrice();
+        if(item.getquantity() >= minimumQuantity){
+            return originalPrice * (1.0 - discountPercentage) ;
+        }
+        return originalPrice ;
     }
     
 }
